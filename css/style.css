@@ -870,7 +870,7 @@ body::after {
 }
 
 .tariff_main {
-  background: #680001;
+  background: #680001 !important;
 }
 
 .tariff__top {
@@ -1054,7 +1054,11 @@ body::after {
 }
 
 .no-webp .slide-schedule:nth-child(even){
-  background: #f5f2e9 url("../img/schedule-bg.jpg") 50%/cover no-repeat; }
+  background: url("../img/schedule-bg.jpg") 50%/cover no-repeat; }
+
+.slide-schedule:nth-child(even) {
+  background-color: #f5f2e9;
+}
 
 .slide-schedule__label {
   font-family: "LuxuriousScript", sans-serif;
@@ -1549,7 +1553,7 @@ body::after {
 
 .bottom-about__col_red {
   color: #fff;
-  background: #680001;
+  background: #680001 !important;
 }
 
 .bottom-about__cap {
@@ -2755,7 +2759,7 @@ body::after {
 
 .webp .tariff{ background: url(../img/tariff-bg.webp) 50%/cover no-repeat; }
 
-.webp .slide-schedule:nth-child(even){ background: #f5f2e9 url(../img/schedule-bg.webp) 50%/cover no-repeat; }
+.webp .slide-schedule:nth-child(even){ background: url(../img/schedule-bg.webp) 50%/cover no-repeat; }
 
 .webp .buy-col:first-child{ background: url(../img/buy-bg.webp) 50%/cover no-repeat; }
 
