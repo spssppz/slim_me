@@ -165,12 +165,14 @@ body {
   padding: 0.9375rem 1.25rem;
   color: #f5f2e9;
   background: #680001;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: 0.0625rem solid #680001;
 }
 
 .btn_disabled {
   background: #d9d9d9;
+  border-color: #d9d9d9;
   pointer-events: none;
 }
 
@@ -869,6 +871,9 @@ body::after {
   height: 100%;
 }
 
+.no-webp .tariff:nth-child(2){
+  background-image: url("../img/tariff-bg-2.jpg"); }
+
 .tariff_main {
   background: #680001 !important;
 }
@@ -926,16 +931,21 @@ body::after {
   color: #f5f2e9;
 }
 
+.tariff__content ul li::before {
+  content: "*";
+  position: absolute;
+  color: #680001;
+  font-size: 1.375rem;
+  top: 0;
+  left: 0;
+}
+
 .tariff_main .tariff__content ul li {
   color: #f5f2e9;
 }
 
-.tariff__content ul li::before {
-  content: "*";
-  position: absolute;
-  font-size: 1.375rem;
-  top: 0;
-  left: 0;
+.tariff_main .tariff__content ul li::before {
+  color: #f5f2e9;
 }
 
 .tariff__content ul li:not(:last-child) {
@@ -950,6 +960,7 @@ body::after {
 
 .tariff_main .tariff__btn {
   background: #f5f2e9;
+  border-color: #f5f2e9;
 }
 
 .schedule {
@@ -1193,23 +1204,24 @@ body::after {
 
 .eat__images::before,
 .eat__images::after {
-  content: "Nata";
+  content: "";
   position: absolute;
-  font-size: 8.125rem;
   z-index: -1;
-  color: #680001;
-  font-family: "LuxuriousScript", sans-serif;
+  width: 10.875rem;
+  height: 9.75rem;
+  background: url("../img/icons/nata.svg") 50%/100% no-repeat;
 }
 
 .eat__images::before {
-  top: -5rem;
-  left: -0.625rem;
+  top: -5.9375rem;
+  left: -1.25rem;
 }
 
 .eat__images::after {
-  content: "Shustova";
-  right: -3.4375rem;
-  bottom: -4.8125rem;
+  background-image: url("../img/icons/shustova.svg");
+  width: 19.375rem;
+  right: -3.9375rem;
+  bottom: -5.9375rem;
 }
 
 .eat__image img {
@@ -1239,20 +1251,24 @@ body::after {
   color: #680001;
 }
 
-.buy-col:first-child .buy-col__image::before,
-.buy-col:first-child .buy-col__image::after {
-  color: #680001;
-}
-
 .buy-col:last-child {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
 
+.buy-col:last-child .buy-col__image::before {
+  background-image: url("../img/icons/nata-w.svg");
+}
+
+.buy-col:last-child .buy-col__image::after {
+  background-image: url("../img/icons/shustova-w.svg");
+}
+
 .buy-col:last-child .buy-col__btn {
   background: #f5f2e9;
   color: #680001;
+  border-color: #f5f2e9;
 }
 
 .buy-col__body {
@@ -1280,24 +1296,25 @@ body::after {
 
 .buy-col__image::before,
 .buy-col__image::after {
-  content: "Nata";
+  content: "";
+  background: url("../img/icons/nata.svg") 50%/100% no-repeat;
   position: absolute;
-  font-size: 8.125rem;
+  width: 10.875rem;
+  height: 9.75rem;
   z-index: -1;
-  color: #f5f2e9;
   z-index: 2;
-  font-family: "LuxuriousScript", sans-serif;
 }
 
 .buy-col__image::before {
   bottom: 5.625rem;
-  left: -5.9375rem;
+  left: -8.4375rem;
 }
 
 .buy-col__image::after {
-  content: "Shustova";
+  width: 19.375rem;
+  background-image: url("../img/icons/shustova.svg");
   right: -8.125rem;
-  bottom: -3.125rem;
+  bottom: -4.375rem;
 }
 
 .buy-col__image:not(:last-child) {
@@ -1915,7 +1932,7 @@ body::after {
   }
 
   .eat__images::before {
-    left: 0.625rem;
+    left: 0rem;
   }
 
   .eat__images::after {
@@ -2647,16 +2664,17 @@ body::after {
 
   .buy-col__image::before,
   .buy-col__image::after {
-    font-size: 4.9375rem;
+    width: 7.8125rem;
   }
 
   .buy-col__image::before {
-    left: -3.75rem;
-    bottom: 4.375rem;
+    left: -5rem;
+    bottom: 3.75rem;
   }
 
   .buy-col__image::after {
-    bottom: -2.5rem;
+    width: 13.5625rem;
+    bottom: -4.6875rem;
     right: -3.75rem;
   }
 
@@ -2719,7 +2737,8 @@ body::after {
 
 @media (any-hover: hover) {
   .btn:hover {
-    opacity: 0.8;
+    background: #f5f2e9;
+    color: #680001;
   }
 
   .popup__close:hover {
@@ -2752,12 +2771,34 @@ body::after {
             transform: scale(1.1);
   }
 
+  .hero-col__btn:hover {
+    background: #680001;
+    color: #f5f2e9;
+  }
+
+  .tariff__btn:hover {
+    background: #680001;
+    color: #f5f2e9;
+  }
+
+  .tariff_main .tariff__btn:hover {
+    background: #680001;
+    color: #f5f2e9;
+  }
+
+  .buy-col:last-child .buy-col__btn:hover {
+    color: #f5f2e9;
+    background: #680001;
+  }
+
   .spoller__title:hover {
     opacity: 0.7;
   }
 }
 
 .webp .tariff{ background: url(../img/tariff-bg.webp) 50%/cover no-repeat; }
+
+.webp .tariff:nth-child(2){ background-image: url(../img/tariff-bg-2.webp); }
 
 .webp .slide-schedule:nth-child(even){ background: url(../img/schedule-bg.webp) 50%/cover no-repeat; }
 
